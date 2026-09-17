@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Walima — Amina &amp; Shoaib</title>
+  <meta name="description" content="You are invited to the Walima of Amina & Shoaib." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Amiri:ital,wght@0,400;0,700;1,400&family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Great+Vibes&family=Noto+Naskh+Arabic:wght@500;600;700&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <div class="cursor" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <canvas id="dust" aria-hidden="true"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="mesh" aria-hidden="true"></div>
+  <div class="hero-glow" aria-hidden="true"></div>
+
+  <audio id="ayahAudio" preload="auto"></audio>
+  <button class="audio-toggle" id="audioToggle" type="button" hidden aria-pressed="false" aria-label="Mute recitation">
+    <span class="audio-icon" aria-hidden="true"></span>
+    <span class="audio-text">Ayah</span>
+  </button>
+
+  <div class="ayah-ceremony" id="ayahCeremony">
+    <p class="ar ceremony-bismillah">بسم الله الرحمن الرحيم</p>
+    <p class="ar ceremony-ayah">وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً</p>
+    <p class="ceremony-ref">Surah Ar-Rum · 30:21</p>
+    <p class="ceremony-meaning">And among His signs is that He created for you spouses from among yourselves, so that you may find rest in them, and He placed between you affection and mercy.</p>
+  </div>
+
+  <div class="intro" id="intro">
+    <img class="intro-wreath" src="assets/wreath.png" alt="" />
+    <div class="envelope" id="envelope">
+      <div class="envelope-back"></div>
+      <div class="envelope-card">
+        <p class="ar intro-ar">بسم الله الرحمن الرحيم</p>
+        <p class="envelope-kicker">The Walima of</p>
+        <p class="envelope-names">Amina <span>&amp;</span> Shoaib</p>
+      </div>
+      <div class="envelope-pocket"></div>
+      <div class="envelope-flap"></div>
+      <button class="seal" id="openInvite" type="button" aria-label="Open the invitation">
+        <span class="seal-mono">A&amp;S</span>
+        <span class="seal-label">Open</span>
+      </button>
+    </div>
+    <p class="intro-hint">Open the seal — the couple is waiting</p>
+  </div>
+
+  <header class="site-header" id="header">
+    <a class="wordmark" href="#top">Walima</a>
+    <nav>
+      <a href="#invitation">Invite</a>
+      <a href="#details">Details</a>
+      <a href="#evening">Evening</a>
+      <a href="#blessing">Blessing</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" id="hero">
+      <div class="hero-head reveal">
+        <img class="hero-garland" src="assets/garland.png" alt="" />
+        <p class="ar bismillah">بسم الله الرحمن الرحيم</p>
+        <p class="kicker">Together with their families</p>
+      </div>
+
+      <div class="couple-stage" id="coupleStage">
+        <figure class="person bride">
+          <span class="person-light" aria-hidden="true"></span>
+          <img src="assets/bride.png" alt="The bride, Amina" />
+        </figure>
+
+        <div class="hero-card">
+          <span class="card-sheen" aria-hidden="true"></span>
+          <img class="card-wreath" src="assets/wreath.png" alt="" />
+          <h1 class="names">
+            <span class="name foil reveal delay-2">Amina</span>
+            <span class="ampersand reveal delay-3">&amp;</span>
+            <span class="name foil reveal delay-4">Shoaib</span>
+          </h1>
+          <p class="hero-sub reveal delay-5">request the honour of your presence at their Walima</p>
+          <p class="hero-date reveal delay-6">Saturday · 24 October 2026 · 7:00 PM</p>
+          <span class="meet-heart" aria-hidden="true"></span>
+        </div>
+
+        <figure class="person groom">
+          <span class="person-light" aria-hidden="true"></span>
+          <img src="assets/groom.png" alt="The groom, Shoaib" />
+        </figure>
+      </div>
+
+      <a class="scroll-cue reveal delay-8" href="#invitation">
+        <span>The evening</span>
+        <i></i>
+      </a>
+    </section>
+
+    <section class="section invitation" id="invitation">
+      <div class="frame">
+        <img class="frame-garland" src="assets/garland.png" alt="" />
+        <p class="ar section-ar reveal">بارك الله لهما وبارك عليهما</p>
+        <h2 class="section-title reveal delay-1">An evening of blessing</h2>
+        <p class="lede reveal delay-2">
+          After the nikah, we gather for Walima — a feast of gratitude, prayer, and joy.
+          Your presence would complete the night as we begin this new chapter,
+          surrounded by the people we love.
+        </p>
+        <blockquote class="ayah reveal delay-3">
+          <p class="ar">وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً</p>
+          <cite>Ar-Rum 30:21 · He created for you spouses, that you may find rest in them, and placed between you affection and mercy</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <section class="section details" id="details">
+      <div class="section-head reveal">
+        <p class="kicker">When &amp; Where</p>
+        <h2 class="section-title">The gathering</h2>
+      </div>
+      <div class="cards">
+        <article class="glass-card reveal delay-1">
+          <span class="card-label">Date</span>
+          <strong>24 October 2026</strong>
+          <p>Saturday evening</p>
+        </article>
+        <article class="glass-card reveal delay-2">
+          <span class="card-label">Time</span>
+          <strong>7:00 PM</strong>
+          <p>Guests received from 6:30</p>
+        </article>
+        <article class="glass-card reveal delay-3">
+          <span class="card-label">Venue</span>
+          <strong>The Grand Palais</strong>
+          <p>Garden Hall, 12 Crescent Avenue</p>
+        </article>
+        <article class="glass-card reveal delay-4">
+          <span class="card-label">Attire</span>
+          <strong>Garden formal</strong>
+          <p>Pistachio, blush &amp; cream</p>
+        </article>
+      </div>
+      <div class="countdown reveal" id="countdown" aria-label="Countdown to the Walima">
+        <div class="count-unit"><span id="days">00</span><small>Days</small></div>
+        <div class="count-unit"><span id="hours">00</span><small>Hours</small></div>
+        <div class="count-unit"><span id="minutes">00</span><small>Minutes</small></div>
+        <div class="count-unit"><span id="seconds">00</span><small>Seconds</small></div>
+      </div>
+      <div class="detail-actions reveal">
+        <a class="btn" id="saveDate" href="#">Save the date</a>
+        <a class="btn btn-ghost" href="https://maps.google.com/?q=The+Grand+Palais" target="_blank" rel="noopener">View map</a>
+      </div>
+    </section>
+
+    <section class="section evening" id="evening">
+      <div class="section-head reveal">
+        <p class="kicker">The night unfolds</p>
+        <h2 class="section-title">Order of evening</h2>
+      </div>
+      <ol class="timeline">
+        <li class="reveal delay-1">
+          <time>6:30</time>
+          <div>
+            <h3>Arrival</h3>
+            <p>Welcome drinks, garden lamps, and the first greetings.</p>
+          </div>
+        </li>
+        <li class="reveal delay-2">
+          <time>7:00</time>
+          <div>
+            <h3>Walima begins</h3>
+            <p>A short dua, then the couple is received.</p>
+          </div>
+        </li>
+        <li class="reveal delay-3">
+          <time>7:45</time>
+          <div>
+            <h3>The feast</h3>
+            <p>Dinner is served. Stay, talk, celebrate at your pace.</p>
+          </div>
+        </li>
+        <li class="reveal delay-4">
+          <time>9:30</time>
+          <div>
+            <h3>Joy &amp; farewell</h3>
+            <p>Photographs, blessings, and a slow close to the night.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section blessing" id="blessing">
+      <div class="blessing-panel reveal">
+        <img class="frame-garland" src="assets/garland.png" alt="" />
+        <p class="kicker">With love</p>
+        <h2 class="section-title">We would be honoured</h2>
+        <p class="lede">Your presence is the gift. Come as you are, stay as long as the night feels kind, and leave with our duas.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p class="ar">اللهم بارك لهما وبارك عليهما واجمع بينهما في خير</p>
+    <p class="foil names-small">Amina &amp; Shoaib</p>
+    <p class="fine">24 October 2026 · The Grand Palais</p>
+  </footer>
+
+  <script src="assets/script.js"></script>
+</body>
+</html>
