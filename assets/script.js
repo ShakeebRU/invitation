@@ -1,11 +1,11 @@
 const EVENT = {
-  bride: "Amina",
-  groom: "Hassan",
-  start: "2026-10-24T19:00:00",
-  end: "2026-10-24T23:30:00",
-  venue: "The Grand Palais",
-  address: "Garden Hall, 12 Crescent Avenue",
-  title: "Walima of Amina & Hassan",
+  bride: "D/O M. Mushtaq Ahmed",
+  groom: "Shakeeb Raza Ullah",
+  start: "2026-11-08T19:00:00",
+  end: "2026-11-08T23:30:00",
+  venue: "Good Luck Marriage Hall",
+  address: "Manno Abad near Ravi Rehan",
+  title: "Walima of Shakeeb Raza Ullah & D/O M. Mushtaq Ahmed",
 };
 
 const intro = document.getElementById("intro");
