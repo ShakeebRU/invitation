@@ -644,7 +644,7 @@ body.ready .couple-stage.settled .meet-heart {
 
 .name {
   font-family: "Great Vibes", cursive;
-  font-size: clamp(2.6rem, 5.2vw, 4.1rem);
+  font-size: clamp(2.6rem, 4.7vw, 4.1rem);
   line-height: 1;
 }
 
